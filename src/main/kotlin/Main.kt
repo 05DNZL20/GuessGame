@@ -10,7 +10,7 @@ fun main() {
 
     fillList(tmp,generatedNumber)
 
-   //println("${generatedNumber[0]}${generatedNumber[1]}${generatedNumber[2]}${generatedNumber[3]}")
+    //println("${generatedNumber[0]}${generatedNumber[1]}${generatedNumber[2]}${generatedNumber[3]}")
 
     while (!checkIfWin) {
         while (check) {
@@ -19,6 +19,8 @@ fun main() {
             if ((guessedNum >= 1000) && (guessedNum <= 9999)) {
                 userGuess = guessedCharArray(guessedNum)
                 check = false
+            }else{
+                println("Please enter a number over 1000 and less than 10000!!")
             }
         }
 
@@ -31,8 +33,7 @@ fun main() {
         check = true
     }
 
-    println("${generatedNumber[0]}${generatedNumber[1]}${generatedNumber[2]}${generatedNumber[3]}")
-    println("Congratulations you guessed the number!!!")
+    println("Congratulations you guessed the number: ${generatedNumber[0]}${generatedNumber[1]}${generatedNumber[2]}${generatedNumber[3]}")
 }
 
 fun fillList( List1: MutableList<Char>, List2: MutableList<Char>){
